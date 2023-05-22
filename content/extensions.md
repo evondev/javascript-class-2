@@ -1,0 +1,6 @@
+- Babel Javascript
+- IntelliCode
+- Live Server
+- Prettier - Code formatter
+- Turbo Console Log
+- Auto Rename Tag
