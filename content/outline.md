@@ -77,6 +77,7 @@
 # Buổi 2
 
 - Giải bài tập buổi 1
+- Ôn lại kiến thức buổi 1
 
 ### String methods
 
