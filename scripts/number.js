@@ -1,5 +1,6 @@
 // 1, 1.5
 // NaN: Not a number
+const amount = new Number(1000);
 const score = 100;
 const money = 1050.5;
 const bigNumber = "1.5321000000";

@@ -53,6 +53,7 @@
 - Dùng dấu + để nối chuỗi -> "i" + "am" -> "iam"
 - Backticks - Template literal - string literal
 - Cấu trúc biến trong dấu `` sẽ là ${variableName}
+- Độ dài của chuỗi sẽ đếm từ 1, còn vị trí index sẽ đếm từ 0
 - **Methods**
 - _toUpperCase()_ -> biến chuỗi thành IN HOA
 - _toLowerCase()_ -> biến chuỗi thành in thường
@@ -62,10 +63,14 @@
 - _repeat(count)_ -> lặp lại số lần chuỗi
 - _replace(value1, value2)_ -> thay thế chuỗi từ value1 biến thành value2
 - _replaceAll(value1, value2)_ -> tương tự replace nhưng là thay thế hết thay vì chỉ 1 value như replace
-- _slice(start, end)_ -> dùng để sao chép chuỗi, nó sẽ lấy từ vị trí start tới end-1
+- _slice(start, end)_ -> dùng để sao chép chuỗi, nó sẽ lấy từ vị trí `start` tới `end-1`, giá trị `end` và `start` là không bắt buộc
+- Nếu không truyền `start` và `end` vào thì nó sẽ sao chép nguyên chuỗi
+- Nếu `end` là `-1` thì nó sẽ hiểu là vị trí cuối cùng của chuỗi
+- Nếu start và end bằng nhau thì nó sẽ trả ra chuỗi rỗng ""
+- Nếu start > end thì cũng trả ra chuỗi rỗng
+- Nếu end là số âm thì chúng ta có công thức là độ dài của chuỗi - giá trị tuyệt đối của end
 - _split(value)_ -> tách chuỗi thành mảng chứa các chuỗi nhỏ theo value truyền vào
-- _join(value)_ -> dùng để biến mảng thành chuỗi dựa vào value truyền vào, ngược lại với split
-- _reverse()_ -> đảo ngược mảng
+- value truyền vào là giá trị mà chúng ta muốn tách dựa vào chuỗi ban đầu
 - _startsWith(value)_ -> kiểm tra chuỗi có bắt đầu với value không ? -> Boolean
 - _endsWith(value)_ -> kiểm tra chuỗi có kết thúc với value không ? -> Boolean
 - _concat(value)_ -> để nối chuỗi
@@ -73,6 +78,10 @@
 - _trimStart()_ -> loại bỏ khoảng trắng đầu chuỗi
 - _trimEnd()_ -> loại bỏ khoảng trắng cuối chuỗi
 - _substring(start, end)_ -> tương tự slice
+- Nếu `start > end` nó sẽ đổi vị trí của start và end -> `substring(20, 10)` -> `substring(10, 20)`
+- Nếu giá trị start hoặc end là số âm hoặc là NaN thì nó sẽ đổi thành 0
+- substring(20, "abc") -> substring(20, 0)
+- substring('abc', 20) -> substring(0, 20)
 - _toString()_ -> convert giá trị thành chuỗi
 - Chaining methods
 
@@ -81,6 +90,7 @@
 - NaN -> not a number
 - Kiểu dữ liệu của NaN là `number`
 - Number(value), parseInt(value), parseFloat(value), +value -> chuyển đổi sang số
+- Number("string") -> NaN
 - _Math.floor(number)_ -> làm tròn xuống
 - _Math.round(number)_ -> làm tròn gần nhất
 - _Math.ceil(number)_ -> làm tròn lên
@@ -105,11 +115,44 @@
 
 - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence
 - Arithmetic Operators: + - \* / () % ++ --
-- Comparison Operators: > < >= <= ==(loose equality: doesn’t compare the data types) vs ===(strict equality) -> Boolean
+- Comparison Operators: > < >= <= ==(loose equality: doesn’t compare the data types) vs ===(strict equality) -> `Boolean`
 - Logical Operators: && || !
+- `1 && 2 && true && 10` -> Chạy từ trái quả phải,nếu tất cả đều đúng thì sẽ trả ra kết quả cuối cùng -> 10
+- `1 && 2 && false && 10` -> Chạy từ trái qua phải, nếu gặp điều kiện sai thì sẽ dừng và lấy giá trị sai đó -> false
+- `1 || 2 || 3` -> Chạy từ trái qua phải, gặp điều kiện đúng đầu tiên thì sẽ dừng và lấy giá trị đó -> 1
+- Hoặc đúng hoặc sai -> đúng
+- Và đúng và sai -> sai
 - Assignment Operators: = += -= \*= /=
 - count++: nó sẽ gán trước và tăng giá trị sau
 - ++count: nó sẽ tăng trước và gán sau
+- % chia lấy dư
+- ++ tăng lên 1 đơn vị
+- -- giảm đi 1 đơn vị
+
+## loose equality
+
+- Nó sẽ trả về `true` khi cả 2 vế có cùng giá trị và kiểu dữ liệu
+- Nếu 1 trong 2 là `null` hoặc `undefined` thì giá trị còn lại cũng phải là `null` hoặc `undefined` thì sẽ có kết quả là `true` ngược lại là `false`
+- Nếu 1 trong 2 là Boolean thì nó sẽ convert giá trị boolean đó sang number, Number(true) -> 1, Number(false) -> 0
+- Khi so sánh số với chuỗi thì nó sẽ convert chuỗi sang số
+
+# if/else
+
+- Nếu điều kiện đúng thì làm 1 việc gì đó
+- `else` tức là ngược lại với if
+- `else if` nghĩa ngược lại với điều kiện trước và thêm 1 điều kiện nữa
+- Phép gán(assignment operators) không được để trong câu điều kiện ví dụ sai: `if(a = b){}`
+
+# switch/case
+
+- Nếu sử dụng điều kiện dựa vào biến trong `case` thì switch nhận vào phải là `true`
+- Nếu giá trị đầu vào switch là biến thì không thể viết điều kiện ở `case` mà nó phải là 1 giá trị nhất định
+- Khi điều kiện từ 2 lần trở lên thì nên sử dụng switch/case
+
+# ternary operator
+
+- 1 kiểu viết rút gọn điều kiện inline
+- conditional ? điều kiện đúng chạy vào đây : điều kiện sai chạy vào đây
 
 # Type coercion
 
@@ -125,9 +168,10 @@
 - Khi thực hiện việc chuyển đổi (type coercion) nếu có toán tử dấu cộng(+) với vế có chuỗi(string) thì nó sẽ convert sang **string**
 - Nếu có toán tử dấu(+ - \* / % > < <= >= | & ^ ~ ==) thì nó sẽ convert sang **number**
 - Nếu có toán tử logical(|| && !) thì nó sẽ convert sang **boolean**
-- null chỉ bằng null hoặc undefined khi sử dụng 2 dấu bằng(==)
+- `null` chỉ bằng `null` hoặc `undefined` khi sử dụng 2 dấu bằng(==)
 - `NaN` thực hiện toán tử với số thì trả ra kết quả là `NaN`
 - Nếu so sánh chuỗi với chuỗi thì không convert sang gì cả
+- Number(value) nếu value là chuỗi thì trả ra NaN
 
 # Function
 
@@ -170,6 +214,8 @@
 - _reduce_ gom các phần tử trong mảng lại làm 1, thường gặp khi làm tính tổng các số trong mảng, hoặc nối chuỗi
 - _JSON.parse(JSON.stringify(originalList))_ dùng để sao chép một mảng phức tạp, có nhiều mảng lồng nhau
 - Sao chép mảng 1 cấp thì dùng Array.from, slice() hoặc spread operator
+- _join(value)_ -> dùng để biến mảng thành chuỗi dựa vào value truyền vào, ngược lại với split
+- _reverse()_ -> đảo ngược mảng
 
 # Loop
 
