@@ -102,24 +102,22 @@
 
 # Buổi 3
 
-### Functions
+## Functions
 
 - intro
 - declaration
 - name
 - parameters vs arguments
 - normal function vs arrow function
-- callback -> callback hell
+- callback
 - return keyword
 - declaration vs expression
 - hoisting
 - scope
 - execution context 🤯
-- call stack
 - calling context: global or local execution context 🤯
-- using local context
-- using global context
 - function return function
+- IIFE
 
 ### Closure 🤯
 
@@ -127,7 +125,7 @@
 
 # Buổi 4 + 5: Vòng lặp và mảng
 
-### Loop
+## Loop
 
 - for
 - for of
@@ -136,7 +134,7 @@
 - break
 - continue
 
-### Array
+## Array
 
 - declaration
 - index, length, random, undefined
@@ -309,3 +307,6 @@ for (var i = 1; i <= 5; i++) {
 - Face Detection
 - Web Speech
 - Video
+- call stack
+- using local context
+- using global context
