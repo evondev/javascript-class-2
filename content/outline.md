@@ -129,6 +129,7 @@
 
 - for
 - for of
+- forEach
 - while
 - do while
 - break
