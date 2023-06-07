@@ -33,3 +33,11 @@
 - _join(value)_ -> dùng để biến mảng thành chuỗi dựa vào value truyền vào, ngược lại với split
 - _reverse()_ -> đảo ngược mảng
 - Khi thực hiện 1 phương thức nào đó mà sợ ảnh hưởng tới mảng gốc, mà không nhớ phương thức đó có ảnh hưởng hay không thì tốt nhất là nên sao chép mảng(slice, spread operator) rồi mới xử lý
+- lastIndexOf
+- findLastIndex
+- flat
+- fill
+- Destructuring
+- [1,2,3,4,5,6]
+- Big O Notation
+- Time Complexity

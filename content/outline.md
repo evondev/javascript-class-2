@@ -140,7 +140,7 @@
 - declaration
 - index, length, random, undefined
 - Reference types don't hold values, they are a pointer to the value in memory.
-- array methods: map, forEach, sort, push, pop, shift, unshift, reduce, find, findIndex, some, every, concat, filter, reverse, slice, splice, join, at, fill, findLastIndex, flat, includes, lastIndexOf, from, toString, isArray,
+- array methods: map, forEach, sort, push, pop, shift, unshift, reduce, find, findIndex, some, every, concat, filter, reverse, slice, splice, join, at, fill, findLastIndex, flat, includes, lastIndexOf, from, toString, isArray
 - Spread operator
 - Destructuring
 - Clone array shallow, deep
@@ -160,6 +160,9 @@
 - for in
 - Function constructor
 - `This` keyword
+- call, apply, bind
+- Class
+- Recursion
 
 # Buổi 7: DOM
 
@@ -279,11 +282,7 @@
 - Data Structure
 - LinkedIn
 - English Conversation: Mai Lam Crazy
-- this
-- call, apply, bind
 - Regex
-- Class
-- Recursion
 
 # Hard part
 

@@ -13,7 +13,7 @@ numbers[numbers.length - 1]; // numbers.at(-1)
   // # Methods
   // 1. map
   // const doubleNumbers = [2,4,6,8,10];
-  const doubleNumbers = numbers.map((value) => value * 2);
+  const doubleNumbers = numbers.map((value, index, array) => value * 2);
   console.log("doubleNumbers ~ doubleNumbers:", doubleNumbers);
   // 2. push
   numbers.push(6);
@@ -75,6 +75,20 @@ numbers[numbers.length - 1]; // numbers.at(-1)
   const sortedNumbers = randomNumbers.slice().sort((a, b) => b - a);
   console.log("sortedNumbers:", sortedNumbers);
   console.log("numbers:", numbers);
+  // 19. lastIndexOf
+  const newNumbers = [1, 2, 3, 1, 1];
+  console.log("newNumbers:", newNumbers.lastIndexOf(1));
+  // 20. findLastIndex
+  const lastIndex = newNumbers.findLastIndex((item) => item === 1);
+  console.log("lastIndex:", lastIndex);
+  // 21. flat
+  const complexArr = [1, 2, 3, [2, [[[[2, 3, 4, [[[, 5, 6]]]]]]]]];
+  // [1,2,3,2,2,3,4,5,6]
+  const flatArr = complexArr.flat(Infinity);
+  console.log("flatArr:", flatArr);
+  // 22. fill
+  const aLetters = new Array(3).fill("a");
+  console.log("aLetters:", aLetters);
 }
 {
   // # Clone array
@@ -92,4 +106,22 @@ numbers[numbers.length - 1]; // numbers.at(-1)
   complexStudents2[1][0][0] = "Tran Anh Tuan";
   console.log("complexStudents2:", complexStudents2);
   console.log("complexStudents:", complexStudents);
+}
+{
+  // # Destructuring
+  const information = ["evondev", 29];
+  // const myName = information.at(0);
+  // const myAge = information.at(-1);
+  const [myAge, myName] = ["evondev", 29];
+  // const [isActive, setIsActive] = useState(false);
+  // useState(false) -> [false, (value) => value]
+  // [isActive, setIsActive] -> [false, (value) => value]
+  console.log("myAge:", myAge);
+  console.log("myName:", myName);
+}
+{
+  // # Rest parameters
+  const numbers = [1, 2, 3, 4, 5];
+  const [a, b, ...others] = numbers;
+  console.log("others:", others);
 }
