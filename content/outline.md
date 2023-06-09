@@ -158,11 +158,11 @@
 - Optional chaining
 - Rest parameter
 - for in
-- Function constructor
 - `This` keyword
 - call, apply, bind
-- Class
 - Recursion
+- Function constructor
+- Class
 
 # Buổi 7: DOM
 
