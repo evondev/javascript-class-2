@@ -44,3 +44,53 @@
 - object.hasOwnProperty(property) -> boolean
 - Object.freeze(object) -> không cho phép thay đổi key và value, hay là thêm mới
 - Object.seal(object) -> Cho phép thay đổi value, không cho phép thay đổi key hay là thêm mới
+
+## This
+
+- `this` sử dụng ở trong method trong object lúc này nó sẽ trỏ tới object đó
+- `this` sử dụng ở inner function trong method của object sẽ là global object(Window)
+- Ở inner function trong method của object muốn truy xuất từ khóa `this` thì có thể thay inner function thành arrow function
+-
+
+## Function constructor
+
+- Dùng để tạo ra nhiều object giống nhau
+- Tên function phải in hoa chữ cái đầu: `Student`
+- Bên trong function thì sẽ sử dụng từ khóa `this`
+- Sử dụng new FunctionConstructor -> new Person()
+- `prototype` dùng để kế thừa trong Javascript
+- const tuan = new Person();
+- tuan.**proto** -> constructor f Person()
+
+## Classes
+
+- Dùng để tạo ra nhiều object giống nhau
+- Tên class phải in hoa chữ cái đầu: `Person`
+- Từ khóa `static` trước method có nghĩa là cho phép class gọi trực tiếp từ bên ngoài
+
+```js
+class Person {
+  constructor() {}
+  static hobby() {
+    console.log("I love to learn Javascript very much");
+  }
+}
+```
+
+- Person.hobby() -> console
+- get và set có cùng tên: get myName, set myName(name)
+- Nếu lấy giá trị thì class sẽ hiểu là getter
+- Nếu thiết lập giá trị thì class hiểu là setter
+- Kế thừa (extends)
+
+## call, apply, bind
+
+- call và apply là như nhau nhưng cách dùng khác nhau
+- bind là để sử dụng sau
+- call apply và bind chỉ sử dụng được cho function mà thôi
+- functionName.call, functionName.bind, functionName.apply
+- getPostDetails.call(thisArg?, arg1, arg2,...argn)
+- getPostDetails.apply(thisArg?, [arg1, arg2, ...argn])
+- arg1... ko bắt buộc tùy trường hợp
+- `thisArg` là không bắt buộc có thể là từ khóa `this`, `null`, 1 object nào đó
+- Chúng ta gọi Bind method dùng để xác định tham số `this` cho một function.

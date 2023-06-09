@@ -141,3 +141,14 @@ function myReduce(array, callback, initialValue) {
 }
 const total = myReduce([1, 2, 3, 4, 5], (a, b) => a + b, 0);
 console.log("total:", total);
+const n = [1, 2, 3, 4, 5];
+Array.prototype.mapped = function (callback) {
+  const results = [];
+  for (let index = 0; index < this.length; index++) {
+    const element = this[index];
+    results.push(callback(element, index, this));
+  }
+  return results;
+};
+const res = n.mapped((item) => item * 5);
+console.log("res:", res);

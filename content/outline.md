@@ -160,9 +160,10 @@
 - for in
 - `This` keyword
 - call, apply, bind
-- Recursion
 - Function constructor
 - Class
+- Recursion
+- ES6 -> ESNext
 
 # Buổi 7: DOM
 
@@ -302,11 +303,5 @@ for (var i = 1; i <= 5; i++) {
 - Set
 - Map
 - Generator function
-- prototype
-- Canvas
-- Face Detection
-- Web Speech
-- Video
-- call stack
-- using local context
-- using global context
+
+# Algorithms & Data structure

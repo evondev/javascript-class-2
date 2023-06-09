@@ -32,7 +32,7 @@ console.log("student:", student);
 console.log("newStudent:", newStudent);
 // student.myRole();
 // 1. if
-if (student && student.devices && student.devices.keyboard) {
+if (student?.devices?.keyboard) {
   // body code
   console.log(student.devices.keyboard);
 }
@@ -102,3 +102,155 @@ console.log(person.printIntroduction()());
 // me.name = "Matthew";
 // me.isHuman = true;
 // console.log("person:", person);
+{
+  // this
+  console.log(`----- object this ------`);
+  const person = {
+    title: "Truong Kien Cuong",
+    age: 20,
+    getInformation() {
+      // this: person
+      // const _this = this;
+      // const getDetailsInfo = () => {
+      //   // this: window object
+      //   console.log(this);
+      //   return `${this.title} is ${this.age} years old`;
+      // };
+      function getDetailsInfo() {
+        // this: window object
+        console.log(this);
+        return `${this.title} is ${this.age} years old`;
+      }
+      return getDetailsInfo.bind(this);
+    },
+  };
+  person.greet = function () {
+    return `hi`;
+  };
+  console.log(person.getInformation()());
+}
+{
+  // Function constructor
+  // const student1 = {
+  //   name: "Tran Anh Tuan",
+  //   age: 20,
+  // };
+  // const student2 = {
+  //   name: "Truong Kien Cuong",
+  //   age: 20,
+  // };
+  // const student3 = {
+  //   name: "Nguyen Minh Chien",
+  //   age: 20,
+  // };
+  console.log(`-----Function Constructor-----`);
+  function Person(name, age) {
+    this.name = name;
+    this.age = age;
+    // this.greet = function () {
+    //   console.log("Hello World");
+    // };
+  }
+  // Object.prototype.greet = function () {
+  //   console.log("Say Hi");
+  // };
+  // Person.prototype.greet = function () {
+  //   console.log("Say Hi");
+  // };
+  const tuan = new Person("Tuan", 29);
+  console.log(tuan.__proto__);
+  // tuan.greet();
+  // tuan.hobby = ["Badminton"];
+  // console.log("tuan:", tuan);
+  const cuong = new Person("Cuong", 18);
+  // cuong.greet();
+  // cuong.game = "CSGo";
+  // console.log("cuong:", cuong);
+  // const chien = new Person("Chien", 22);
+  // const phat = new Person("Phat", 24);
+  // new Array, new String, new Number -> built-in Constructor
+}
+{
+  // Classes
+  console.log(`-----Classes-----`);
+  // function Person(name, age){
+  //   this.name = name;
+  //   this.age = age;
+  // }
+  class Person {
+    constructor(name, age) {
+      this.name = name;
+      this.age = age;
+    }
+    greet() {
+      console.log("Hello World");
+      return "Hello World";
+    }
+    get myName() {
+      return this.name;
+    }
+    set myName(newName) {
+      this.name = newName;
+    }
+    static hobby() {
+      console.log("I love to learn Javascript very much");
+    }
+  }
+  const tuan = new Person("Tran Anh Tuan", 30);
+  // console.log(tuan.myName);
+  // tuan.myName = "Evondev";
+  // console.log(tuan.myName);
+  // Person.greet();
+  // tuan.greet();
+  // const student = {
+  //   name: "Evondev",
+  //   age: 30,
+  //   className: "IT",
+  //   school: "Ton Duc Thang",
+  // };
+  // NodeJS NestJS Typescript
+  // Functional
+  class Student extends Person {
+    constructor(name, age) {
+      super(name, age);
+    }
+    greet() {
+      console.log(`${super.greet()} Hello I am your student`);
+    }
+  }
+  const cuong = new Student("Cuong", 18);
+  cuong.greet();
+}
+{
+  // call, apply, bind
+  console.log("----call, apply, bind----");
+  const post = {
+    title: "Harry Potter",
+    author: "J. K. Rowling",
+    info() {
+      return `${this.title} is written by ${this.author}.`;
+    },
+  };
+  function getPostDetails(publishDate, rating) {
+    return `${this.title} is written by ${this.author}. Publised in ${publishDate} and have ${rating} stars`;
+  }
+  // console.log(getPostDetails());
+  console.log(getPostDetails.call(post, 2023, 4));
+  console.log(getPostDetails.call(post, "2020", 5));
+  console.log(
+    getPostDetails.apply(
+      {
+        title: "IndianaJones",
+        author: "Advanture",
+      },
+      ["2020", 5]
+    )
+  );
+  // const n = [1, 2, 3, 4, 5];
+  // const max1 = Math.max.call(null, 1, 2, 3, 4, 5);
+  // const max2 = Math.max.apply(null, n);
+  // console.log("max2:", max2);
+  const newPost = post.info.bind(post);
+  console.log(newPost());
+  // console.log("newPost:", newPost.info());
+}
