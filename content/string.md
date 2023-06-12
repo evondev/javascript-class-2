@@ -1,0 +1,37 @@
+# String
+
+- 'harry potter', "tran anh tuan", `very good`
+- Dùng dấu + để nối chuỗi -> "i" + "am" -> "iam"
+- Backticks - Template literal - string literal
+- Cấu trúc biến trong dấu `` sẽ là ${variableName}
+- Độ dài của chuỗi sẽ đếm từ 1, còn vị trí index sẽ đếm từ 0
+- **Methods**
+- _toUpperCase()_ -> biến chuỗi thành IN HOA
+- _toLowerCase()_ -> biến chuỗi thành in thường
+- _includes(value)_ -> kiểm tra chuỗi có chứa value hay không -> Boolean
+- _indexOf(value)_ -> trả ra vị trí index của value tìm thấy đầu tiên trong chuỗi, nếu ko tìm thấy sẽ trả ra -1
+- _lastIndexOf(value)_ -> tương tự indexOf nhưng nó sẽ lấy value tìm thấy cuối cùng trong chuỗi
+- _repeat(count)_ -> lặp lại số lần chuỗi
+- _replace(value1, value2)_ -> thay thế chuỗi từ value1 biến thành value2
+- _replaceAll(value1, value2)_ -> tương tự replace nhưng là thay thế hết thay vì chỉ 1 value như replace
+- _slice(start, end)_ -> dùng để sao chép chuỗi, nó sẽ lấy từ vị trí `start` tới `end-1`, giá trị `end` và `start` là không bắt buộc
+- Nếu không truyền `start` và `end` vào thì nó sẽ sao chép nguyên chuỗi
+- Nếu `end` là `-1` thì nó sẽ hiểu là vị trí cuối cùng của chuỗi
+- Nếu start và end bằng nhau thì nó sẽ trả ra chuỗi rỗng ""
+- Nếu start > end thì cũng trả ra chuỗi rỗng
+- Nếu end là số âm thì chúng ta có công thức là độ dài của chuỗi - giá trị tuyệt đối của end
+- _split(value)_ -> tách chuỗi thành mảng chứa các chuỗi nhỏ theo value truyền vào
+- value truyền vào là giá trị mà chúng ta muốn tách dựa vào chuỗi ban đầu
+- _startsWith(value)_ -> kiểm tra chuỗi có bắt đầu với value không ? -> Boolean
+- _endsWith(value)_ -> kiểm tra chuỗi có kết thúc với value không ? -> Boolean
+- _concat(value)_ -> để nối chuỗi
+- _trim()_ -> loại bỏ khoảng trắng đầu cuối của chuỗi
+- _trimStart()_ -> loại bỏ khoảng trắng đầu chuỗi
+- _trimEnd()_ -> loại bỏ khoảng trắng cuối chuỗi
+- _substring(start, end)_ -> tương tự slice
+- Nếu `start > end` nó sẽ đổi vị trí của start và end -> `substring(20, 10)` -> `substring(10, 20)`
+- Nếu giá trị start hoặc end là số âm hoặc là NaN thì nó sẽ đổi thành 0
+- substring(20, "abc") -> substring(20, 0)
+- substring('abc', 20) -> substring(0, 20)
+- _toString()_ -> convert giá trị thành chuỗi
+- Chaining methods

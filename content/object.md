@@ -4,6 +4,10 @@
 - Key phải là chuỗi: age, name, "my-name", "my-school"
 - Value là các kiểu dữ liệu đã học: number, boolean, string, array, object, function
 - Nếu key không tồn tại thì kết quả sẽ trả ra `undefined`
+- Truy xuất 1 thuộc tính không tồn tại trong object sẽ trả ra `undefined`(1 cấp)
+- Nếu cố gắng truy xuất thuộc tính 2 cấp mà không tồn tại thì sẽ bị lỗi _TypeError_
+- `?.` Optional chaining sẽ kiểm tra thuộc tính có tồn tại hay không, nếu tồn tại thì nó sẽ chạy tiếp sang phải, không tồn tại thì trả ra kết quả
+- nullish coalescing `variable(value1) ?? value2`: nếu value1 là `null` hoặc `undefined` thì nó sẽ lấy value2, ngược lại nó sẽ lấy value1
 
 ## Accessing
 
