@@ -53,12 +53,12 @@
 
 ## Hover
 
-- mouseenter -> rê chuột vào phần tử, khá giống hover trong CSS
-- mouseleave -> rê chuột vào phần tử sau đó rê ra ngoài lại
-- mouseover -> giống mouseenter và nó sẽ chạy khi rê chuột vào phần tử và con của phần tử đó
-- mousemove -> di chuyển chuột ở element
-- mousedown -> click chuột trái hoặc phải
-- mouseup -> khi nhấn chuột xong nhả ra
+- `mouseenter` -> rê chuột vào phần tử, khá giống hover trong CSS
+- `mouseleave` -> rê chuột vào phần tử sau đó rê ra ngoài lại
+- `mouseover` -> giống mouseenter và nó sẽ chạy khi rê chuột vào phần tử và con của phần tử đó
+- `mousemove` -> di chuyển chuột ở element
+- `mousedown` -> click chuột trái hoặc phải
+- `mouseup` -> khi nhấn chuột xong nhả ra
 
 ## Touch
 
