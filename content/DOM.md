@@ -109,3 +109,8 @@
 
 - Trả ra tọa độ của phần tử
 - DOM.getBoundingClientRect()
+
+## style
+
+- element.style.cssProperty
+- cssProperty -> color, backgroundColor
