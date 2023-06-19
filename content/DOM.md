@@ -1,5 +1,10 @@
 # DOM - Document Object Model
 
+- window.innerHeight sẽ trả ra viewport height
+- document.body.scrollHeight -> trả ra chiều cao của body bao gồm cả scroll
+- window.scrollY -> khoảng cách khi scroll theo chiều dọc
+- window.location -> 1 object chứa nhiều thông tin domain
+
 ## Selectors
 
 - _document.documentElement_ -> thẻ html

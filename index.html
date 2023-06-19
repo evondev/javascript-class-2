@@ -56,6 +56,40 @@
       <div class="menu-item">Services</div>
     </div>
     <!-- <div class="menu-effect"></div> -->
-    <script src="./scripts/events/mouse.js"></script>
+    <input type="text" class="input" placeholder="Enter your name" />
+    <div class="otp">
+      <input type="number" class="otp-input" />
+      <input type="number" class="otp-input" />
+      <input type="number" class="otp-input" />
+      <input type="number" class="otp-input" />
+    </div>
+    <form class="login" autocomplete="off">
+      <input type="email" class="login-input" name="email" required />
+      <input type="password" name="password" class="login-input" required />
+      <button class="login-button">Login</button>
+    </form>
+    <div class="countdown">
+      <div class="day">
+        <span class="number">00</span>
+        <span class="text">Days</span>
+      </div>
+      <div class="semi">:</div>
+      <div class="hour">
+        <span class="number">00</span>
+        <span class="text">Hours</span>
+      </div>
+      <div class="semi">:</div>
+      <div class="minute">
+        <span class="number">00</span>
+        <span class="text">Minutes</span>
+      </div>
+      <div class="semi">:</div>
+      <div class="second">
+        <span class="number">00</span>
+        <span class="text">Seconds</span>
+      </div>
+    </div>
+    <script src="./scripts/events/debounce.js"></script>
+    <!-- JetBrains Mono -->
   </body>
 </html>

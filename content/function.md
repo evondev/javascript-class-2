@@ -1,3 +1,5 @@
+# Function
+
 - Function hay còn gọi là hàm, là 1 hoặc nhiều đoạn code xử lý 1 chức năng nào đó, có tính lặp đi lặp lại
 - Cú pháp:
 
@@ -50,3 +52,19 @@ const total = (a, b) => {
 - function definition
 - `backpack`
 - Link: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures
+
+# Call, Apply, Bind
+
+- Chỉ sử dụng được cho function mà thôi
+- Cơ bản là khá giống nhau, mục đích là thay đổi context của `this`
+- Khi sử dụng call và apply thì nó sẽ chạy ngay lập tức, call và apply khá giống nhau, chỉ khác cách truyền arguments
+- Khi sử dụng bind thì nó sẽ tạo ra 1 bản copy của function, và được sử dụng sau
+- call và apply là như nhau nhưng cách dùng khác nhau
+- bind là để sử dụng sau
+- call apply và bind chỉ sử dụng được cho function mà thôi
+- functionName.call, functionName.bind, functionName.apply
+- getPostDetails.call(thisArg?, arg1, arg2,...argn)
+- getPostDetails.apply(thisArg?, [arg1, arg2, ...argn])
+- arg1... ko bắt buộc tùy trường hợp
+- `thisArg` là không bắt buộc có thể là từ khóa `this`, `null`, 1 object nào đó
+- Chúng ta gọi Bind method dùng để xác định tham số `this` cho một function.

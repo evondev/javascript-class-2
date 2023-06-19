@@ -221,8 +221,10 @@
 - setTimeout
 - setInterval
 - Date
+- Debounce
 - Intersection Observer
 - Regex
+- Local Storage
 
 # Buổi 10: Bất đồng bộ
 

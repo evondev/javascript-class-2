@@ -54,7 +54,11 @@
 - `this` sử dụng ở trong method trong object lúc này nó sẽ trỏ tới object đó
 - `this` sử dụng ở inner function trong method của object sẽ là global object(Window)
 - Ở inner function trong method của object muốn truy xuất từ khóa `this` thì có thể thay inner function thành arrow function
--
+- `this` là global object(window)
+- `this` sẽ trỏ tới object gần nhất
+- `this` ở trong method (trong object) sẽ trỏ tới object
+- `this` ở trong function sẽ trỏ tới global(window)
+- Trong event thì `this` sẽ trỏ tới element nhận vào event
 
 ## Function constructor
 
@@ -86,15 +90,3 @@ class Person {
 - Nếu lấy giá trị thì class sẽ hiểu là getter
 - Nếu thiết lập giá trị thì class hiểu là setter
 - Kế thừa (extends)
-
-## call, apply, bind
-
-- call và apply là như nhau nhưng cách dùng khác nhau
-- bind là để sử dụng sau
-- call apply và bind chỉ sử dụng được cho function mà thôi
-- functionName.call, functionName.bind, functionName.apply
-- getPostDetails.call(thisArg?, arg1, arg2,...argn)
-- getPostDetails.apply(thisArg?, [arg1, arg2, ...argn])
-- arg1... ko bắt buộc tùy trường hợp
-- `thisArg` là không bắt buộc có thể là từ khóa `this`, `null`, 1 object nào đó
-- Chúng ta gọi Bind method dùng để xác định tham số `this` cho một function.

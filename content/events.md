@@ -5,22 +5,25 @@
 ## eventName
 
 - click
+- mouse(up, down, enter, leave, move, over)
 
 ## Input
 
-- keydown: Hoạt động khi nhấn bàn phím xuống
-- keyup: Sự kiện này sẽ xảy ra khi nhấn phím rồi thả ra
-- keypress: sự kiện này xảy ra khi các bạn nhấn phím
-- keypress sẽ ignore các phím như delete, mũi tên, page up, page down, home, end, ctrl, alt, shift, esc
+- `keydown`: Hoạt động khi nhấn bàn phím xuống
+- `keyup`: Sự kiện này sẽ xảy ra khi nhấn phím rồi thả ra
+- `keypress`: sự kiện này xảy ra khi các bạn nhấn phím
+- `keypress` sẽ ignore các phím như delete, mũi tên, page up, page down, home, end, ctrl, alt, shift, esc
 - Thứ tự ưu tiên keydown -> keypress -> keyup
-- change: xảy ra khi gõ xong, nhấn Enter hoặc nhấn chuột ra ngoài 1 lần
-- keydown và keypress chạy trước khi kí tự xuất hiện, còn keyup thì chạy sau khi kí tự xuất hiện
+- `change`: xảy ra khi gõ xong, nhấn Enter hoặc nhấn chuột ra ngoài 1 lần
+- `keydown` và `keypress` nó sẽ lấy giá trị trước khi gõ lần tiếp, lần đầu gõ chữ `a` thì nó sẽ là rỗng, lần tiếp theo gõ `ab` thì nó sẽ lấy giá trị là `a` trước đó - `e.target.value`
+- `e.key` nó sẽ trả ra key mà chúng nhấn vào
+- `e.code` nó sẽ trả ra tên key mà chúng ta nhấn vào: Enter
 - Truy xuất giá trị trong Form -> this.elements["username"].value
 - Để chặn hành vi mặc định trong `keypress` thì nên dùng `event.preventDefault`, nếu ko muốn tiếp cận code ở dưới nữa thì thêm `return;`
 - `event.preventDefault` không có tác dụng với `keyup`
-- input -> gõ tới đâu lấy tới đó như keyup, nhưng nó ko có event.keyCode, hoặc event.key
-- focus -> khi focus vào input
-- blur -> khi nhấn focus sau đó nhấn ra ngoài
+- `input` -> gõ tới đâu lấy tới đó như keyup, nhưng nó ko có event.code, hoặc event.key
+- `focus` -> khi focus vào input
+- `blur` -> khi nhấn focus sau đó nhấn ra ngoài
 
 ## Click
 
@@ -50,6 +53,7 @@
 
 - submit -> submit form, khi button có type là submit hoặc nhấn enter
 - this.elements['password'].value -> lấy giá trị của input có name là `password` trong form khi submit
+- this.password.value -> lấy giá trị của input có name là `password` trong form khi submit
 
 ## Hover
 

@@ -1,33 +1,9 @@
-# DOM
-
-- window.innerHeight sẽ trả ra viewport height
-- document.body.scrollHeight -> trả ra chiều cao của body bao gồm cả scroll
-- window.scrollY -> khoảng cách khi scroll theo chiều dọc
-- window.location -> 1 object chứa nhiều thông tin domain
-
 # Timer
 
 - setTimeout -> thuộc về webAPIs -> chỉ chạy 1 lần sau 1 khoảng thời gian nhất định
 - clearTimeout
 - setInterval -> thuộc về webAPIs -> chạy nhiều lần sau 1 khoảng thời gian nhất định
 - clearInterval
-
-# Date
-
-- `new Date().method()`
-- getFullYear() -> trả ra năm hiện tại
-- getMonth() -> trả ra tháng hiện tại, tháng bắt đầu từ 0(0 tương ứng tháng 1)
-- getDate() -> trả ra ngày của tháng ( mùng 10 )
-- getDay() -> trả ra thứ tự ngày của tuần( thứ 2 -> 1)
-- getHours() -> trả ra giờ hiện tại
-- getMinutes() -> trả ra phút hiện tại
-- getSeconds() -> trả ra giây hiện tại
-- toDateString() -> trả ra thông tin của ngày bao gồm thứ tháng ngày năm(Mon Apr 10 2023)
-- toTimeString() -> trả ra giờ phút giây và múi giờ(21:23:18 GMT+0700 (Indochina Time))
-- toISOString() -> trả ra kiểu ISO(2023-04-10T14:23:18.101Z)
-- toLocaleDateString() -> trả ra kiểu month/day/year(4/10/2023)
-- toLocaleDateString("vi-VI") -> trả ra kiểu ngày/tháng/năm của Việt Nam(4/10/2023)
-- new Date(endDate) - now -> trả ra tổng số miliseconds
 
 # Intersection observer
 
@@ -57,21 +33,6 @@
 - localStorage.setItem("key", JSON.stringify(value))
 - localStorage.getItem("key")
 - localStorage.removeItem("key")
-
-# This
-
-- `this` là global object(window)
-- `this` sẽ trỏ tới object gần nhất
-- `this` ở trong method (trong object) sẽ trỏ tới object
-- `this` ở trong function sẽ trỏ tới global(window)
-- Trong event thì `this` sẽ trỏ tới element nhận vào event
-
-# Call, Apply, Bind
-
-- Chỉ sử dụng được cho function mà thôi
-- Cơ bản là khá giống nhau, mục đích là thay đổi context của `this`
-- Khi sử dụng call và apply thì nó sẽ chạy ngay lập tức, call và apply khá giống nhau, chỉ khác cách truyền arguments
-- Khi sử dụng bind thì nó sẽ tạo ra 1 bản copy của function, và được sử dụng sau
 
 # Regex
 
