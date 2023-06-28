@@ -231,7 +231,7 @@
 - Single thread
 - Callback hell -> setTimeout
 - Promise -> new Promise((resovle, reject)) -> pending, resolve, reject -> then - catch - finally
-- Promise.all, Promise.allSettled, Promise.race,
+- Promise.all, Promise.allSettled, Promise.race, Promise.any
 - Asynchronous
 - API
 - fetch
@@ -277,15 +277,6 @@
 - Local storage
 - CRUD
 - Axios
-
-# Other
-
-- https://www.instagram.com/inside.code/
-- Algorithms: Leetcode, HackerRank
-- Data Structure
-- LinkedIn
-- English Conversation: Mai Lam Crazy
-- Regex
 
 # Hard part
 

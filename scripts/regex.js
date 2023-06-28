@@ -22,6 +22,8 @@ complexContent.match(regexH1)?.forEach((match) => {
 console.log(newContent);
 // 2. Learning
 {
-  // const regex = //gmi;
-  // const str = `Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias ab pariatur veniam corporis molestiae, nesciunt iusto dolorum maxime itaque accusamus placeat? Molestias ut placeat vitae ad laboriosam repudiandae, porro consectetur.`;
+  const regex = /<a href="\S+">\s?\S+\s?<\/a>/gim;
+  const str = `Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias ab pariatur veniam corporis molestiae, nesciunt iusto dolorum maxime itaque accusamus placeat? <a href="#">evondev.com</a> Molestias ut placeat vitae ad laboriosam repudiandae, porro consectetur. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde, <a href="https://evon.dev">evon.dev</a> consequatur hic? Pariatur sapiente obcaecati fuga repudiandae, earum recusandae vero quo unde eius a quidem delectus ipsum aspernatur eos illum molestias!`;
+  const newStr = str.replace(regex, "");
+  console.log(newStr);
 }
