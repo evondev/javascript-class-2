@@ -8,6 +8,16 @@
     <link rel="stylesheet" href="./styles/main.css" />
   </head>
   <body>
-    <script src="./scripts/asynchronous.js"></script>
+    <form class="news-form">
+      <input
+        type="text"
+        class="news-search"
+        name="query"
+        placeholder="Enter your query"
+      />
+      <button class="news-search">Search</button>
+    </form>
+    <div class="news-list"></div>
+    <script src="./scripts/api/hackernews.js"></script>
   </body>
 </html>
