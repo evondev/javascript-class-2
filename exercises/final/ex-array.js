@@ -6,9 +6,8 @@ function isValidArray(arr) {
 function fillArray(num, character) {
   if (typeof num !== "number" || typeof character !== "string") return [];
   const results = [];
-  for (let index = 0; index < num.length; index++) {
-    const element = num[index];
-    results.push(element);
+  for (let index = 0; index < num; index++) {
+    results.push(character);
   }
   return results;
 }
